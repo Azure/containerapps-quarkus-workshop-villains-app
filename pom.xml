@@ -5,6 +5,7 @@
   <groupId>com.azure.containerapps.quarkus.workshop.superheroes</groupId>
   <artifactId>villains-app</artifactId>
   <version>1.0.0-SNAPSHOT</version>
+  <name>ContainerApps and Quarkus Workshop :: Villains Microservice</name>
   <properties>
     <compiler-plugin.version>3.8.1</compiler-plugin.version>
     <failsafe.useModulePath>false</failsafe.useModulePath>
