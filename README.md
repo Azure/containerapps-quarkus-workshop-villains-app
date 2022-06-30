@@ -7,6 +7,7 @@ If you want to learn more about Quarkus, please visit its website: https://quark
 ## Running the application in dev mode
 
 You can run your application in dev mode that enables live coding using:
+
 ```shell script
 ./mvnw compile quarkus:dev
 ```
@@ -16,15 +17,18 @@ You can run your application in dev mode that enables live coding using:
 ## Packaging and running the application
 
 The application can be packaged using:
+
 ```shell script
 ./mvnw package
 ```
+
 It produces the `quarkus-run.jar` file in the `target/quarkus-app/` directory.
 Be aware that it’s not an _über-jar_ as the dependencies are copied into the `target/quarkus-app/lib/` directory.
 
 The application is now runnable using `java -jar target/quarkus-app/quarkus-run.jar`.
 
 If you want to build an _über-jar_, execute the following command:
+
 ```shell script
 ./mvnw package -Dquarkus.package.type=uber-jar
 ```
@@ -34,11 +38,13 @@ The application, packaged as an _über-jar_, is now runnable using `java -jar ta
 ## Creating a native executable
 
 You can create a native executable using:
+
 ```shell script
 ./mvnw package -Pnative
 ```
 
 Or, if you don't have GraalVM installed, you can run the native executable build in a container using:
+
 ```shell script
 ./mvnw package -Pnative -Dquarkus.native.container-build=true
 ```
@@ -57,7 +63,7 @@ Easily start your Reactive RESTful Web Services
 
 ## Contributing
 
-This project welcomes contributions and suggestions.  Most contributions require you to agree to a
+This project welcomes contributions and suggestions. Most contributions require you to agree to a
 Contributor License Agreement (CLA) declaring that you have the right to, and actually do, grant us
 the rights to use your contribution. For details, visit https://cla.opensource.microsoft.com.
 
@@ -71,8 +77,10 @@ contact [opencode@microsoft.com](mailto:opencode@microsoft.com) with any additio
 
 ## Trademarks
 
-This project may contain trademarks or logos for projects, products, or services. Authorized use of Microsoft 
-trademarks or logos is subject to and must follow 
-[Microsoft's Trademark & Brand Guidelines](https://www.microsoft.com/en-us/legal/intellectualproperty/trademarks/usage/general).
-Use of Microsoft trademarks or logos in modified versions of this project must not cause confusion or imply Microsoft sponsorship.
+This project may contain trademarks or logos for projects, products, or services. Authorized use of Microsoft
+trademarks or logos is subject to and must follow
+[Microsoft's Trademark & Brand Guidelines](https://www.microsoft.com/en-us/legal/intellectualproperty/trademarks/usage/general)
+.
+Use of Microsoft trademarks or logos in modified versions of this project must not cause confusion or imply Microsoft
+sponsorship.
 Any use of third-party trademarks or logos are subject to those third-party's policies.
