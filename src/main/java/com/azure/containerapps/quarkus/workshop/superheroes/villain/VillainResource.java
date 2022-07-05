@@ -18,7 +18,7 @@ import javax.ws.rs.core.Response;
 import static javax.ws.rs.core.MediaType.APPLICATION_JSON;
 
 @Path("/api/villains")
-@Tag(name = "villains")
+@Tag(name = "villain")
 @ApplicationScoped
 @Produces(MediaType.APPLICATION_JSON)
 public class VillainResource {
@@ -32,7 +32,7 @@ public class VillainResource {
 
     @GET
     @Path("/random")
-    @Operation(summary = "Returns a random villain")
+    @Operation(operationId = "getRandomVillain", summary = "Returns a random villain")
     @APIResponse(
         responseCode = "200",
         content = @Content(mediaType = APPLICATION_JSON, schema = @Schema(implementation = Villain.class, required = true))
@@ -47,8 +47,7 @@ public class VillainResource {
     @GET
     @Path("/hello")
     @Produces(MediaType.TEXT_PLAIN)
-    @Tag(name = "hello")
-    @Operation(summary = "Returns hello from the villain resource")
+    @Operation(operationId = "hello", summary = "Returns hello from the villain resource")
     public String hello() {
         logger.info("Hello from Villain Resource");
         return "Hello from Villain Resource";
